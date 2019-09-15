@@ -1,0 +1,24 @@
+{
+    "name": "php-mqtt/client-examples",
+    "description": "These are examples showcasing how to use php-mqtt/client.",
+    "type": "project",
+    "keywords": [
+        "mqtt",
+        "client",
+        "publish",
+        "subscribe",
+        "example"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Namoshek",
+            "email": "namoshek@gmx.at",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "ext-pcntl": "*",
+        "php-mqtt/client": "^0.1"
+    }
+}

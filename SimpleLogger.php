@@ -1,0 +1,84 @@
+<?php
+
+declare(strict_types=1);
+
+use Psr\Log\AbstractLogger;
+use Psr\Log\LoggerInterface;
+use Psr\Log\LogLevel;
+
+class SimpleLogger extends AbstractLogger implements LoggerInterface
+{
+    /** @var string */
+    private $logLevel;
+
+    /** @var int */
+    private $logLevelNumeric;
+
+    /**
+     * SimpleLogger constructor.
+     *
+     * @param string|null $logLevel
+     */
+    public function __construct(string $logLevel = null)
+    {
+        if ($logLevel === null) {
+            $logLevel = LogLevel::DEBUG;
+        }
+
+        $this->logLevel        = $logLevel;
+        $this->logLevelNumeric = $this->mapLogLevelToInteger($logLevel);
+    }
+
+    /**
+     * Logs with an arbitrary level.
+     *
+     * @param mixed  $level
+     * @param string $message
+     * @param array  $context
+     * @return void
+     */
+    public function log($level, $message, array $context = []): void
+    {
+        if ($this->mapLogLevelToInteger($level) < $this->logLevelNumeric) {
+            return;
+        }
+
+        echo sprintf("[%s] %s (%s)\n", $level, $message, json_encode($context));
+    }
+
+    /**
+     * Maps the string representation of a log level to the numeric level.
+     *
+     * @param string $level
+     * @return int
+     */
+    protected function mapLogLevelToInteger(string $level): int
+    {
+        $map = $this->getLogLevelMap();
+
+        if (!array_key_exists($level, $map)) {
+            return $map[LogLevel::DEBUG];
+        }
+
+        return $map[$level];
+    }
+
+    /**
+     * Returns a log level map.
+     *
+     * @return array
+     */
+    protected function getLogLevelMap(): array
+    {
+        return [
+            LogLevel::DEBUG     => 0,
+            LogLevel::INFO      => 1,
+            LogLevel::NOTICE    => 2,
+            LogLevel::WARNING   => 3,
+            LogLevel::ERROR     => 4,
+            LogLevel::CRITICAL  => 5,
+            LogLevel::ALERT     => 6,
+            LogLevel::EMERGENCY => 7,
+        ];
+    }
+}
