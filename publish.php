@@ -48,7 +48,7 @@ function publish(MQTTClient $mqtt): void
 {
     try {
         foreach (range(1, 50) as $number) {
-            $mqtt->publish("php-mqtt/client/{$number}", "This is a simple counter: {$number}", MQTTClient::QOS_EXACTLY_ONCE);
+            $mqtt->publish("php-mqtt/client/{$number}", "This is a simple counter: {$number}", MQTTClient::QOS_AT_MOST_ONCE);
         }
     } catch (DataTransferException $e) {
         echo 'Subscribing to a topic failed due to a data transfer error:' . PHP_EOL . '  ' . $e->getMessage();

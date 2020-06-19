@@ -61,7 +61,7 @@ function subscribe(MQTTClient $mqtt): void
             if ($counter >= 50) {
                 echo "Counter reached {$counter} messages.\n";
             }
-        }, MQTTClient::QOS_EXACTLY_ONCE);
+        }, MQTTClient::QOS_AT_MOST_ONCE);
     } catch (DataTransferException $e) {
         echo 'Subscribing to a topic failed due to a data transfer error:' . PHP_EOL . '  ' . $e->getMessage();
     }
