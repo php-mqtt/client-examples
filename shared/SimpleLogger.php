@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace PhpMqtt\Client\Examples\Shared;
+
 use Psr\Log\AbstractLogger;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
