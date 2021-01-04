@@ -36,6 +36,8 @@ For simplicity, all the following examples will publish a single message using Q
 
 ### 4) Hooks
 
+- [Use a loop event handler to perform periodic actions](04_hooks/01_use_a_loop_event_handler_to_perform_periodic_actions.php)
+
 ## How to run the examples?
 
 Simply clone the repository and run `composer install` to install the required dependencies.
