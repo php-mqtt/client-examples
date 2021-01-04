@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/../../vendor/autoload.php';
-require __DIR__ . '/../../shared/config.php';
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../shared/config.php';
 
 use PhpMqtt\Client\Examples\Shared\SimpleLogger;
 use PhpMqtt\Client\Exceptions\MqttClientException;
@@ -20,7 +20,7 @@ try {
     // Connect to the broker without specific connection settings but with a clean session.
     $client->connect(null, true);
 
-    // Subscribe to the topic 'foo/bar/baz' using QoS 2.
+    // Subscribe to the topic 'foo/bar/baz' using QoS 1.
     $client->subscribe('foo/bar/baz', function (string $topic, string $message, bool $retained) use ($logger, $client) {
         $logger->info('We received a {typeOfMessage} on topic [{topic}]: {message}', [
             'topic' => $topic,
@@ -30,7 +30,7 @@ try {
 
         // After receiving the first message on the subscribed topic, we want the client to stop listening for messages.
         $client->interrupt();
-    }, MqttClient::QOS_EXACTLY_ONCE);
+    }, MqttClient::QOS_AT_LEAST_ONCE);
 
     // Since subscribing requires to wait for messages, we need to start the client loop which takes care of receiving,
     // parsing and delivering messages to the registered callbacks. The loop will run indefinitely, until a message
@@ -41,5 +41,5 @@ try {
     $client->disconnect();
 } catch (MqttClientException $e) {
     // MqttClientException is the base exception of all exceptions in the library. Catching it will catch all MQTT related exceptions.
-    $logger->error('Subscribing to a topic using QoS 2 failed. An exception occurred.', ['exception' => $e]);
+    $logger->error('Subscribing to a topic using QoS 1 failed. An exception occurred.', ['exception' => $e]);
 }
