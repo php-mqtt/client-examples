@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 require __DIR__ . '/../../vendor/autoload.php';
 require __DIR__ . '/../../shared/config.php';
 
@@ -30,5 +32,5 @@ try {
     $client->disconnect();
 } catch (MqttClientException $e) {
     // MqttClientException is the base exception of all exceptions in the library. Catching it will catch all MQTT related exceptions.
-    $logger->error('Publishing a message using QoS 0 failed. An exception occurred.', ['exception' => $e]);
+    $logger->error('Publishing a message using QoS 2 failed. An exception occurred.', ['exception' => $e]);
 }

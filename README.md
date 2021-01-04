@@ -6,9 +6,12 @@ This repository contains examples for [`php-mqtt/client`](https://github.com/php
 
 ### 1) Publishing
 
-- [Publish a message using QoS 0](01_publishing/01_publish_with_qos_0/) (_unreliable delivery_)
-- [Publish a message using QoS 1](01_publishing/02_publish_with_qos_1/) (_reliable delivery, but probably multiple times_)
-- [Publish a message using QoS 2](01_publishing/03_publish_with_qos_2/) (_reliable delivery, exactly once_)
+When publishing, there is only a noteworthy difference between QoS 0 and QoS 1/2, since QoS 0 is fire and forget, while QoS 1/2 require confirmation.
+For completeness, an example for each QoS level is provided.
+
+- [Publish a message using QoS 0](01_publishing/01_publish_with_qos_0/publish.php) (_unreliable delivery_)
+- [Publish a message using QoS 1](01_publishing/02_publish_with_qos_1/publish.php) (_reliable delivery, but probably multiple times_)
+- [Publish a message using QoS 2](01_publishing/03_publish_with_qos_2/publish.php) (_reliable delivery, exactly once_)
 
 ### 2) Subscribing
 
