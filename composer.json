@@ -17,7 +17,14 @@
             "role": "developer"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "PhpMqtt\\Client\\Examples\\Shared\\": "shared"
+        }
+    },
     "require": {
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
         "ext-pcntl": "*",
         "php-mqtt/client": "dev-master"
     }
