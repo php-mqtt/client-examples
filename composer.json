@@ -19,6 +19,6 @@
     ],
     "require": {
         "ext-pcntl": "*",
-        "php-mqtt/client": "^0.1"
+        "php-mqtt/client": "dev-master"
     }
 }
