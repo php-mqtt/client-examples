@@ -36,7 +36,12 @@ For simplicity, all the following examples will publish a single message using Q
 
 ### 4) Hooks
 
+To inject logic into the execution path of our MQTT client, it is possible to use so-called hooks.
+They are essentially callbacks which can be registered for a specific purpose and which are called upon certain events.
+The following gives a few examples and ideas what can be done with hooks, although they are a lot more versatile than can be shown here.
+
 - [Use a loop event handler to perform periodic actions](04_hooks/01_use_a_loop_event_handler_to_perform_periodic_actions.php)
+- [Use a publish event handler to log published messages](04_hooks/02_use_a_publish_event_handler_to_log_published_messages.php)
 
 ## How to run the examples?
 
