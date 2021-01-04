@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42080a1cb638eab03fb8614f95dd4a86",
+    "content-hash": "adca8406f7ea8e5cab1756eb16d3655e",
     "packages": [
         {
             "name": "myclabs/php-enum",
@@ -68,16 +68,16 @@
         },
         {
             "name": "php-mqtt/client",
-            "version": "dev-master",
+            "version": "v1.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mqtt/client.git",
-                "reference": "129cc6fecf835dee826ff9ae981ef01ee72821e8"
+                "reference": "305fe35caffcfbe521b1ba048c99eee660c51f23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-mqtt/client/zipball/129cc6fecf835dee826ff9ae981ef01ee72821e8",
-                "reference": "129cc6fecf835dee826ff9ae981ef01ee72821e8",
+                "url": "https://api.github.com/repos/php-mqtt/client/zipball/305fe35caffcfbe521b1ba048c99eee660c51f23",
+                "reference": "305fe35caffcfbe521b1ba048c99eee660c51f23",
                 "shasum": ""
             },
             "require": {
@@ -105,8 +105,8 @@
             ],
             "authors": [
                 {
-                    "name": "Namoshek",
-                    "email": "namoshek@gmx.at",
+                    "name": "Marvin Mall",
+                    "email": "marvin-mall@msn.com",
                     "role": "developer"
                 }
             ],
@@ -119,9 +119,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-mqtt/client/issues",
-                "source": "https://github.com/php-mqtt/client/tree/master"
+                "source": "https://github.com/php-mqtt/client/tree/v1.0.0-rc1"
             },
-            "time": "2021-01-03T21:24:44+00:00"
+            "time": "2021-01-04T16:09:18+00:00"
         },
         {
             "name": "psr/log",
@@ -178,7 +178,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "php-mqtt/client": 20
+        "php-mqtt/client": 5
     },
     "prefer-stable": false,
     "prefer-lowest": false,
