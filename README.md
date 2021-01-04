@@ -42,6 +42,7 @@ The following gives a few examples and ideas what can be done with hooks, althou
 
 - [Use a loop event handler to perform periodic actions](04_hooks/01_use_a_loop_event_handler_to_perform_periodic_actions.php)
 - [Use a publish event handler to log published messages](04_hooks/02_use_a_publish_event_handler_to_log_published_messages.php)
+- [Use a message received event handler to log received messages](04_hooks/03_use_a_message_received_event_handler_to_log_received_messages.php)
 
 ## How to run the examples?
 

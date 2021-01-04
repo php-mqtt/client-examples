@@ -15,7 +15,7 @@ $logger = new SimpleLogger(LogLevel::INFO);
 
 try {
     // Create a new instance of an MQTT client and configure it to use the shared broker host and port.
-    $client = new MqttClient(MQTT_BROKER_HOST, MQTT_BROKER_PORT, 'test-subscriber', MqttClient::MQTT_3_1, null, $logger);
+    $client = new MqttClient(MQTT_BROKER_HOST, MQTT_BROKER_PORT, 'test-publisher', MqttClient::MQTT_3_1, null, $logger);
 
     // Connect to the broker without specific connection settings but with a clean session.
     $client->connect(null, true);
