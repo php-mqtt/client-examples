@@ -32,6 +32,7 @@ For simplicity, all the following examples will publish a single message using Q
 - [Authorize using username and password](03_connection_settings/01_authorize_with_username_and_password.php)
 - [Use TLS without client certificate](03_connection_settings/02_use_tls_without_client_certificate.php)
 - [Use TLS with client certificate](03_connection_settings/03_use_tls_with_client_certificate.php)
+- [Declare Last Will upon connection](03_connection_settings/04_declare_last_will_upon_connection.php)
 
 ### 4) Hooks
 
