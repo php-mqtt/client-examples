@@ -44,6 +44,13 @@ The following gives a few examples and ideas what can be done with hooks, althou
 - [Use a publish event handler to log published messages](04_hooks/02_use_a_publish_event_handler_to_log_published_messages.php)
 - [Use a message received event handler to log received messages](04_hooks/03_use_a_message_received_event_handler_to_log_received_messages.php)
 
+### 5) Interrupting the Loop
+
+Since the event loop provided by `MqttClient::loop()` is an infinite loop by design, most applications need a way to escape it.
+Most often the primary use case is for a graceful shutdown of the application, to avoid forceful termination.
+
+- [Use `pcntl_signal` to interrupt the loop](05_interuppting_the_loop/01_use_pcntl_signal_to_interrupt_the_loop.php)
+
 ## How to run the examples?
 
 Simply clone the repository and run `composer install` to install the required dependencies.
