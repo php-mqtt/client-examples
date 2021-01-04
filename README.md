@@ -15,6 +15,13 @@ For completeness, an example for each QoS level is provided.
 
 ### 2) Subscribing
 
+When subscribing, there is not really a difference between the QoS levels. All three QoS levels work the same from a library API perspective.
+Under the hood, each of the QoS levels uses a slightly different implementation, though, to follow the protocol specification. 
+
+- [Subscribe to a topic using QoS 0](02_subscribing/01_subscribe_with_qos_0/subscribe.php) (_unreliable delivery_)
+- [Subscribe to a topic using QoS 1](02_subscribing/02_subscribe_with_qos_1/subscribe.php) (_reliable delivery, but probably multiple times_)
+- [Subscribe to a topic using QoS 2](02_subscribing/03_subscribe_with_qos_2/subscribe.php) (_reliable delivery, exactly once_)
+
 ### 3) Secure Connection using TLS
 
 ### 4) Hooks
