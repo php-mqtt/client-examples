@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "adca8406f7ea8e5cab1756eb16d3655e",
+    "content-hash": "a7eed9a14faddafcee3960c96e36a84d",
     "packages": [
         {
             "name": "myclabs/php-enum",
@@ -68,16 +68,16 @@
         },
         {
             "name": "php-mqtt/client",
-            "version": "v1.0.0-rc1",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mqtt/client.git",
-                "reference": "305fe35caffcfbe521b1ba048c99eee660c51f23"
+                "reference": "ca47fff0d5513c7ebeba8698e8ff8397414c38d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-mqtt/client/zipball/305fe35caffcfbe521b1ba048c99eee660c51f23",
-                "reference": "305fe35caffcfbe521b1ba048c99eee660c51f23",
+                "url": "https://api.github.com/repos/php-mqtt/client/zipball/ca47fff0d5513c7ebeba8698e8ff8397414c38d4",
+                "reference": "ca47fff0d5513c7ebeba8698e8ff8397414c38d4",
                 "shasum": ""
             },
             "require": {
@@ -119,9 +119,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-mqtt/client/issues",
-                "source": "https://github.com/php-mqtt/client/tree/v1.0.0-rc1"
+                "source": "https://github.com/php-mqtt/client/tree/v1.0.0"
             },
-            "time": "2021-01-04T16:09:18+00:00"
+            "time": "2021-01-10T18:42:03+00:00"
         },
         {
             "name": "psr/log",
@@ -177,9 +177,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "php-mqtt/client": 5
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
